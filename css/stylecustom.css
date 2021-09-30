@@ -1,0 +1,216 @@
+/*Exercise #1*/
+.space-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+}
+.hero{
+    width:100%;
+    overflow:hidden;
+    color:#fff;
+    position:relative
+}
+.flex-container{
+    display: flex;
+}
+.space-image{
+    display: flex;
+    width: 1440px;
+    height: 960px;
+    background-size: 1440px 960px;
+    background-repeat: no-repeat;
+    background-image: url(/images/final-frontier_large.jpg);
+    background-position: left top;
+    background-position: center;
+    align-items: center;
+    justify-content: center
+}
+.space-text{
+    text-align: center;
+    width:980px;
+    max-width:100%;
+    position:absolute;
+}
+.moon-image{ 
+    display: flex; 
+    width: 1440px; 
+    height: 960px;
+    background-size: 1440px 960px; 
+    background-repeat: no-repeat; 
+    background-image:url(/images/luna_large.jpg); 
+    background-position: right top; 
+    background-position: center; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.moon-text{
+    text-align: center;
+    width:980px;
+    max-width:100%;
+    position:absolute;
+}
+
+@media only screen and (max-width:735px){
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+    } 
+    .space-image{
+        width:735px;
+        height:490px;
+        background-size:735px 490px;
+        background-repeat:no-repeat;
+        background-image:url(/images/final-frontier_small.jpg);
+    }
+    .moon-image{
+        width:735px;
+        height:490px;
+        background-size:735px 490px;
+        background-repeat:no-repeat;
+        background-image:url(/images/luna_small.jpg);
+    }
+}
+
+@media only screen and (max-width:735px) and (-webkit-min-device-pixel-ratio:1.5),only screen and (max-width:735px) and (min-resolution:1.5dppx),only screen and (max-width:735px) and (min-resolution:144dpi){ 
+    .space-image{
+        background-image:url(/images/final-frontier_small_2x.jpg)
+    } 
+    .moon-image{
+        background-image:url(/images/luna_small_2x.jpg)
+    }
+}
+
+/*Exercise #2*/
+.timeline-container {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, calc(50% - 15px));
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    grid-auto-rows: minmax(15px, auto);
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.timeline-container .timeline-item {
+    margin: 0 auto;
+}
+
+.timeline-1 {
+    -ms-grid-row-span: 14;
+    grid-row-end: span 14;
+}
+
+.timeline-2 {
+    -ms-grid-row-span: 19;
+    grid-row-end: span 19;
+}
+
+.timeline-3 {
+    -ms-grid-row-span: 18;
+    grid-row-end: span 18;
+}
+
+.timeline-4 {
+    -ms-grid-row-span: 15;
+    grid-row-end: span 15;
+}
+
+.timeline-5 {
+    -ms-grid-row-span: 20;
+    grid-row-end: span 20;
+}
+
+.timeline-6 {
+    -ms-grid-row-span: 18;
+    grid-row-end: span 18;
+}
+
+@media only screen and (max-width: 990px) {
+    .timeline-1 {
+        -ms-grid-row-span: 12;
+        grid-row-end: span 12;
+    }
+    .timeline-2 {
+        -ms-grid-row-span: 16;
+        grid-row-end: span 16;
+    }
+    .timeline-3 {
+        -ms-grid-row-span: 16;
+        grid-row-end: span 16;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline-container {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+
+/*Exercise #3*/
+.gallery-content{
+    width: 100%;
+}
+.gallery-flex{
+    display:flex;
+}
+.moon-33-left{
+    width: 33%;
+    height:33vw;
+    max-height:789px
+}
+.moon-77-rigth{
+    width: 77%;
+    height:33vw;
+    max-height:789px
+}
+.moon-77-left{
+    width: 77%;
+    height:33vw;
+    max-height:789px
+}
+.moon-33-rigth{
+    width: 33%;
+    height:33vw;
+    max-height:789px
+}
+.moon-50{
+    width: 50%;
+    height:33vw;
+    max-height:789px
+}
+
+@media only screen and (max-width:736px){
+    .gallery-flex{
+        display:contents;
+    }
+    .moon-33-left{
+        width: 100%;
+        height:50vw;
+    }
+    .moon-77-rigth{
+        width: 100%;
+        height:50vw;
+    }
+    .moon-77-left{
+        width: 100%;
+        height:50vw;
+    }
+    .moon-33-rigth{
+        width: 100%;
+        height:50vw;
+    }
+    .moon-50{
+        width: 100%;
+        height:50vw;
+    }
+}
+
